@@ -1,0 +1,24 @@
+<h2 class="page-header" >Login</h2>
+<div>
+<div class="col">
+  <button class="btn btn-block border-success bg-light" (click)="fblogin()"  >Login with Facebook</button>
+  <button class="btn btn-block border-success bg-light" (click)="googlelogin()" >Login with Google</button>
+</div><br>
+<form class="form-signin" (submit)="onLoginSubmit()">
+
+        <div class="form-group">
+          <label for="Username">Username</label>
+          <input type="text" class="form-control" placeholder="Enter Username" [(ngModel)]="username" name="username">
+        </div>
+        <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" placeholder=" Enter Password" [(ngModel)]="password" name="password">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <input class="btn btn-lg btn-primary" type="submit" value="Login">
+</form>
+</div>
